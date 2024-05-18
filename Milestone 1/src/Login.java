@@ -63,21 +63,8 @@ public class Login extends JFrame {
         // Add an ActionListener to the button
         loginButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                // Instantiate Student class
-//                Student stud = new Student();
-//
-//                // Assign textfield values to stud object
-//                stud.setStudentName(txtUserName.getText());
-//                stud.setStudentNumber(txtPassword.getText());
-//                stud.setQuiz1(Float.parseFloat(txtQuiz1.getText()));
-//                stud.setQuiz2(Float.parseFloat(txtQuiz2.getText()));
-//                stud.setQuiz3(Float.parseFloat(txtQuiz3.getText()));
-
-//
-//                // Instantiate and call GradeOutput class
-//                GradeOutput output = new GradeOutput(stud);
-//                output.setVisible(true);
-
+                WorkTimeCalculator wtc = new WorkTimeCalculator(); //review (stud) from Grade Calculator
+                wtc.setVisible(true);
                 // Close the current frame
                 dispose();
             }
