@@ -6,12 +6,12 @@ public class WorkTimeCalculator extends JFrame {
     // Declare private variables for the Swing components
     private JLabel lblEmployeeId, lblLoginTime, lblLogOutTime;
     private JTextField txtEmployeeId, txtLoginTime, txtLogOutTime;
-    private JButton calculateButton;
+    private JButton calculateButton, viewSalaryButton;
 
 
     public WorkTimeCalculator() {
         // Set up the frame
-        super("Grade Calculator");
+        super("Hours Work Calculator");
         setSize(300, 200);
 
 
@@ -24,6 +24,8 @@ public class WorkTimeCalculator extends JFrame {
         lblLogOutTime = new JLabel("Log-out Time:");
         txtLogOutTime = new JTextField(18);
         calculateButton = new JButton("Calculate");
+        viewSalaryButton = new JButton("View Salary");
+
 
         // Define the panel to hold the components
         JPanel panel = new JPanel();
@@ -39,6 +41,7 @@ public class WorkTimeCalculator extends JFrame {
         panel.add(lblLogOutTime);
         panel.add(txtLogOutTime);
         panel.add(calculateButton);
+        panel.add(viewSalaryButton);
 
         // Put constraint on components
         // Set label position: left
@@ -61,9 +64,13 @@ public class WorkTimeCalculator extends JFrame {
 
 
         // Set button position and size
-        layout.putConstraint(SpringLayout.NORTH, calculateButton, 25, SpringLayout.SOUTH, txtLogOutTime);
-        layout.putConstraint(SpringLayout.WEST, calculateButton, 40, SpringLayout.WEST, panel);
-        layout.putConstraint(SpringLayout.EAST, calculateButton, -40, SpringLayout.EAST, panel);
+        layout.putConstraint(SpringLayout.NORTH, calculateButton, 15, SpringLayout.SOUTH, txtLogOutTime);
+        layout.putConstraint(SpringLayout.WEST, calculateButton, 70, SpringLayout.WEST, panel);
+        layout.putConstraint(SpringLayout.EAST, calculateButton, -70, SpringLayout.EAST, panel);
+
+        layout.putConstraint(SpringLayout.NORTH, viewSalaryButton, 7, SpringLayout.SOUTH, calculateButton);
+        layout.putConstraint(SpringLayout.WEST, viewSalaryButton, 90, SpringLayout.WEST, panel);
+        layout.putConstraint(SpringLayout.EAST, viewSalaryButton, -90, SpringLayout.EAST, panel);
 
 
         //Add panel to frame
@@ -73,21 +80,19 @@ public class WorkTimeCalculator extends JFrame {
         // Add an ActionListener to the button
         calculateButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                // Instantiate Student class
-//                Student stud = new Student();
-//
-//                // Assign textfield values to stud object
-//                stud.setStudentName(txtStudentName.getText());
-//                stud.setStudentNumber(txtStudentNo.getText());
-//                stud.setQuiz1(Float.parseFloat(txtQuiz1.getText()));
-//                stud.setQuiz2(Float.parseFloat(txtQuiz2.getText()));
-//                stud.setQuiz3(Float.parseFloat(txtQuiz3.getText()));
-//
-//                // Instantiate and call GradeOutput class
-//                GradeOutput output = new GradeOutput(stud);
-//                output.setVisible(true);
             }
         });
+
+        viewSalaryButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                EmployeeSalary es = new EmployeeSalary();
+                es.setEmployeeId(txtEmployeeId.getText()); //^
+
+                SalarySheet ss = new SalarySheet(es); //review (stud) from Grade Calculator
+                ss.setVisible(true);
+            }
+        });
+
         setLocationRelativeTo(null);// Center the frame on the screen. When null is passed as the argument, it positions the window in the center of the screen.
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
