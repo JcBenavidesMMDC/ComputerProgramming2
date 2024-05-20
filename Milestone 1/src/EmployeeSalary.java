@@ -13,7 +13,7 @@ public class EmployeeSalary extends  EmployeeDetails{
 
     public void setEmployeeId(String inputId){ //^
         for(int i=0; i<empId.length; i++){
-            if(inputId.equals(empId[i])) { //REMINDER if you remove the {} of "If" statement it will only read one line below it.
+            if(inputId.equals(empId[i])) { 
                 employeeId = inputId;
                 System.out.println(inputId);
             }
