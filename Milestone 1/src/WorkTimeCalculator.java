@@ -73,7 +73,7 @@ public class WorkTimeCalculator extends JFrame {
 
                     //if condition checks input statement individually
                     if (ed.getEmployeeId() == null || ed.getEmployeeId().isEmpty()) {
-                        JOptionPane.showMessageDialog(null, "Please, input a valid employee ID", "ERROR", JOptionPane.ERROR_MESSAGE);
+                        JOptionPane.showMessageDialog(null, "Please, input a valid employee ID (1-3)", "ERROR", JOptionPane.ERROR_MESSAGE);
                     } else if (ed.getLogInInput() == null || ed.getLogInInput().isEmpty()) {
                         JOptionPane.showMessageDialog(null, "Please, input Log-In Time", "ERROR", JOptionPane.ERROR_MESSAGE);
                     } else if (ed.getLogOutInput() == null || ed.getLogOutInput().isEmpty()) {
