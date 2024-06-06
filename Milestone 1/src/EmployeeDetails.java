@@ -1,5 +1,3 @@
-// https://stackoverflow.com/questions/53116921/matching-user-input-against-a-string-array-in-java
-// use this in the future
 import java.time.Duration;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
