@@ -90,7 +90,7 @@ public class WorkTimeCalculator extends JFrame {
         viewSalaryButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 try {
-                    if (ed.getEmployeeId() == null || ed.getLogInInput() == null || ed.getLogOutInput() == null) {
+                    if (ed.getEmployeeId() == null && ed.getLogInInput() == null && ed.getLogOutInput() == null) {
                         JOptionPane.showMessageDialog(null, "Please fill up the following labels", "ERROR", JOptionPane.ERROR_MESSAGE);
                     }else if (!(ed.getEmployeeId() == null) || !(ed.getLogInInput() == null) || !(ed.getLogOutInput() == null)){
                         double calculatedSalary = ed.calculateSalary();
