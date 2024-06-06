@@ -6,10 +6,10 @@ public class Main {
 	Login login = new Login();
     login.setVisible(true);
 
-//    WorkTimeCalculator wtc = new WorkTimeCalculator(); //review (stud) from Grade Calculator
+//    WorkTimeCalculator wtc = new WorkTimeCalculator(); 
 //        wtc.setVisible(true);
 
-//        SalarySheet ss = new SalarySheet(); //review (stud) from Grade Calculator
+//        SalarySheet ss = new SalarySheet(); 
 //        ss.setVisible(true);
     }
 }
