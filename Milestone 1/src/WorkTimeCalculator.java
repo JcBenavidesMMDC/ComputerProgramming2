@@ -72,7 +72,7 @@ public class WorkTimeCalculator extends JFrame {
                     ed.setLogOutTime(txtLogOutTime.getText());
 
                     if (ed.getEmployeeId() == null) {
-                        JOptionPane.showMessageDialog(null, "Please, input a valid employee ID", "ERROR", JOptionPane.ERROR_MESSAGE);
+                        JOptionPane.showMessageDialog(null, "Please, input a valid employee ID (1-3)", "ERROR", JOptionPane.ERROR_MESSAGE);
                     } else if (ed.getLogInInput() == null){
                         JOptionPane.showMessageDialog(null, "Please, input Log-In Time", "ERROR", JOptionPane.ERROR_MESSAGE);
                     } else if (ed.getLogOutInput() == null){
