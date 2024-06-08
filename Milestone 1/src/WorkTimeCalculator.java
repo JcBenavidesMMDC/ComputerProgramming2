@@ -94,7 +94,7 @@ public class WorkTimeCalculator extends JFrame {
                         JOptionPane.showMessageDialog(null, "Please, input a valid Log-Out Time", "ERROR", JOptionPane.ERROR_MESSAGE);
                     } else {
                         try {
-                            //checks if the input follows HH:mm format.
+                            //checks if the input follows HH:mm format. Jumps to catch block dtpe if it's invalid.
                             LocalTime logInTime = LocalTime.parse(logInTimeStr, DateTimeFormatter.ofPattern("HH:mm"));
                             LocalTime logOutTime = LocalTime.parse(logOutTimeStr, DateTimeFormatter.ofPattern("HH:mm"));
 
