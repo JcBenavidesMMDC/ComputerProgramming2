@@ -121,6 +121,7 @@ public class EmployeeDetails extends EmployeeData {
         return hoursWorked * employeeHourlyRate;
     }
 
+    //Needs to reset the previous ID due to a bug encountered wherein, if the employee ID is blank or invalid while the log-in and log-out times have valid inputs, the previous data will display once the 'View Employee' button is pressed.
     public void resetEmployeeDetails() {
         employeeId = null;
     }
