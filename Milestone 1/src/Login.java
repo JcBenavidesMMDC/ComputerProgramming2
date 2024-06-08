@@ -71,7 +71,7 @@ public class Login extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 WorkTimeCalculator wtc = new WorkTimeCalculator(); //review (stud) from Grade Calculator
                 wtc.setVisible(true);
-                JOptionPane.showMessageDialog(null, "FOLLOW THE INPUT FORMAT: \nEmployee ID: 1 \nLog-in Time: 00:00 \nLog-out Time: 23:00" , "Info", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(null, "INSTRUCTIONS \nFollow the input format: \nEmployee ID: 1 \nLog-in Time: 00:00 \nLog-out Time: 23:00\n\nInsert Values within this range: \nEmployee ID: (1-3)\nLog-in Time: (00:00-23:00)\nLog-out Time: (00:00-23:00)\n" , "Info", JOptionPane.INFORMATION_MESSAGE);
 
                 // Close the current frame
                 dispose();
