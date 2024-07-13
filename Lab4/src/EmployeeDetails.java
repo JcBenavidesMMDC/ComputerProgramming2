@@ -188,7 +188,6 @@ public class EmployeeDetails extends JFrame {
 
         // Add an ActionListener to the button
         computeButton.addActionListener(new ActionListener() {
-            @Override
             public void actionPerformed(ActionEvent e) {
                 int selectedMonth = monthComboBox.getSelectedIndex() + 1; // January is 0, so add 1
 
